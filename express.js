@@ -12,7 +12,6 @@ const PORT = process.env.PORT || 5500;
 
 // CSS & JS file access
 app.use(express.static(__dirname + '/public'));
-// app.use(express.static('./'));
 
 // Setup Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -25,7 +24,7 @@ app.get('/', (req, res) => res.sendFile(path.join(__dirname, './public/index.htm
 // GET api/notes from db.json
 app.get('/api/notes', (req, res) => res.json(notesObj));
 
-// POST api/note and add a note id
+// POST api/note and add a note id to each note
 app.post('/api/notes', (req, res) => {
     
     let addNote = req.body;
