@@ -4,6 +4,7 @@
   "description": "An application named Note Taker that can be used to write and save notes.",
   "main": "express.js",
   "scripts": {
+    "start": "node express.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
